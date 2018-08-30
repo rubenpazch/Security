@@ -82,14 +82,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,7 +106,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\apHaylliSeguridad.Business.backup\apHaylliSeguridad.Business.backup.csproj">
+      <Project>{4f922ac9-b363-4863-94c8-0fb7176f52f1}</Project>
+      <Name>apHaylliSeguridad.Business.backup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\apHaylliseguridad.Business\apHaylliSeguridad.Business.Model.csproj">
+      <Project>{fe180257-9438-470c-ba59-e84f3fcf8ce4}</Project>
+      <Name>apHaylliSeguridad.Business.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
